@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    text-align:center;
+    font-family:Arial;
+    margin-top:150px;
+}
+
+#yesBtn, #noBtn{
+    padding:15px 30px;
+    font-size:20px;
+}
+
+#noBtn{
+    position:fixed;
+    left:55%;
+    top:60%;
+}
+</style>
+</head>
+<body>
+
+<h1>hallooo riel sayangg,will u be my gf??:D</h1>
+
+<button id="yesBtn" onclick="alert('YEAYYY,I LOVE YOU RIEL SAYANGGG,MWAAA')">
+    Yes
+</button>
+
+<button id="noBtn">
+    No
+</button>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+
+function kabur() {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+}
+
+noBtn.addEventListener("touchstart", function(e){
+    e.preventDefault();
+    kabur();
+});
+
+noBtn.addEventListener("click", kabur);
+</script>
+
+</body>
+</html>
